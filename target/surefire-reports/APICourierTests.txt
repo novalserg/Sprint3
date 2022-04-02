@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: APICourierTests
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 7.754 s <<< FAILURE! - in APICourierTests
+checkCreateCourierWOFirstName(APICourierTests)  Time elapsed: 3.735 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґР°РЅРЅС‹С… РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё
+  Actual: Недостаточно данных для создания учетной записи
+
+	at APICourierTests.checkCreateCourierWOFirstName(APICourierTests.java:47)
+
+loginCourierWrongDataTest(APICourierTests)  Time elapsed: 0.7 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґР°РЅРЅС‹С… РґР»СЏ РІС…РѕРґР°
+  Actual: Недостаточно данных для входа
+
+	at APICourierTests.loginCourierWrongDataTest(APICourierTests.java:77)
+
+checkCreateCourier(APICourierTests)  Time elapsed: 0.649 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <409>.
+
+	at APICourierTests.checkCreateCourier(APICourierTests.java:24)
+
+deleteCourierTest(APICourierTests)  Time elapsed: 0.628 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at APICourierTests.deleteCourierTest(APICourierTests.java:98)
+
+loginCourierNotExistLoginTest(APICourierTests)  Time elapsed: 0.629 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: РЈС‡РµС‚РЅР°СЏ Р·Р°РїРёСЃСЊ РЅРµ РЅР°Р№РґРµРЅР°
+  Actual: Учетная запись не найдена
+
+	at APICourierTests.loginCourierNotExistLoginTest(APICourierTests.java:88)
+
+checkCreateSameCourier(APICourierTests)  Time elapsed: 0.637 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: Р­С‚РѕС‚ Р»РѕРіРёРЅ СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РґСЂСѓРіРѕР№.
+  Actual: Этот логин уже используется. Попробуйте другой.
+
+	at APICourierTests.checkCreateSameCourier(APICourierTests.java:36)
+
