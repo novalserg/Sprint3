@@ -1,4 +1,5 @@
 import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -13,49 +14,34 @@ import static org.hamcrest.core.IsNull.notNullValue;
 @RunWith(Parameterized.class)
 public class CreateOrderTest {
 
-    private final String scooterColor;
+    private String scooterColor;
 
-    public CreateOrderTest(String scooterColor) {
+
+/*    public CreateOrderTest(String scooterColor) {
         this.scooterColor = scooterColor;
-    }
+    }*/
 
     @Parameterized.Parameters
     public static Object[][] getColor() {
         return new Object[][]{
                 {"BLACK"},
                 {"GREY"},
-                {"BLACK\" , \"GREY"},
+                {"BLACK" , "GREY"},
                 {""}
         };
     }
 
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = "http://qa-scooter.praktikum-services.ru";
-    }
+    OrderClient.OrderData orderData = new OrderClient.OrderData("Александра", "Самокатова", "Мссква, Ленина, 19, 22", 5, "+79874562154", 4, "2022-05-05", "бла-бла-бла", getColor());
 
     @Test
-    @DisplayName("Создание заказа с разными цветами")
-    @Description("Метод должен вернуть 201 с телом {'track':}")
-    public void createOrder() {
-        String orderBody = "{\"firstName\": \"Ivan\", "
-                + "\"lastName\": \"Ivanov\", "
-                + "\"address\": \"Mira, 12 apt.\", "
-                + "\"metroStation\": 4, "
-                + "\"phone\": \"+7 988 377 99 88\", "
-                + "\"rentTime\": 5, "
-                + "\"deliveryDate\": \"2022-03-30\", "
-                + "\"comment\": \"Лифт не работает\", "
-                + "\"color\":";
-        Response response =
-                given()
-                        .header("Content-type", "application/json")
-                        .body(orderBody + "[\"" + scooterColor + "\"]}")
-                        .when()
-                        .post("/api/v1/orders");
+    @Description("Create order test")
+    @Step("Compare ER and FR: status code and response body")
+    public void createOrderTest(){
+        Response response = OrderClient.requestForCreateOrder();
         response.then().assertThat().body("track", notNullValue())
                 .and()
                 .statusCode(201);
         System.out.println(response.body().asString());
+
     }
 }
