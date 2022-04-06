@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="GetOrderListTest" time="1.658" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="GetOrderListTest" time="1.599" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.13_8\bin"/>
-    <property name="sun.java.command" value="C:\Users\noval\AppData\Local\Temp\surefire3584829903326271715\surefirebooter4905573794070365852.jar C:\Users\noval\AppData\Local\Temp\surefire3584829903326271715 2022-04-02T01-43-52_662-jvmRun1 surefire14940881512746994167tmp surefire_015998692320177484496tmp"/>
+    <property name="sun.java.command" value="C:\Users\noval\AppData\Local\Temp\surefire18026876952774005065\surefirebooter9348399270850165963.jar C:\Users\noval\AppData\Local\Temp\surefire18026876952774005065 2022-04-06T22-40-36_170-jvmRun1 surefire2743915244925166395tmp surefire_016698693844347168938tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Coding\Sprint_3\target\test-classes;D:\Coding\Sprint_3\target\classes;C:\Users\noval\.m2\repository\io\rest-assured\rest-assured\4.5.0\rest-assured-4.5.0.jar;C:\Users\noval\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\noval\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\noval\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\noval\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\noval\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\noval\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\noval\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\noval\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\noval\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\noval\.m2\repository\io\rest-assured\json-path\4.5.0\json-path-4.5.0.jar;C:\Users\noval\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\noval\.m2\repository\io\rest-assured\rest-assured-common\4.5.0\rest-assured-common-4.5.0.jar;C:\Users\noval\.m2\repository\io\rest-assured\xml-path\4.5.0\xml-path-4.5.0.jar;C:\Users\noval\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\noval\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\noval\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\noval\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\noval\.m2\repository\io\qameta\allure\allure-junit4\2.17.3\allure-junit4-2.17.3.jar;C:\Users\noval\.m2\repository\io\qameta\allure\allure-java-commons\2.17.3\allure-java-commons-2.17.3.jar;C:\Users\noval\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\noval\.m2\repository\io\qameta\allure\allure-model\2.17.3\allure-model-2.17.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\noval\AppData\Local\Temp\surefire3584829903326271715\surefirebooter4905573794070365852.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\noval\AppData\Local\Temp\surefire18026876952774005065\surefirebooter9348399270850165963.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.13+8-LTS"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="getOrderList" classname="GetOrderListTest" time="1.658"/>
-</testsuite>
+  <testcase name="getOrderList" classname="GetOrderListTest" time="1.599"/>
+</testsuit

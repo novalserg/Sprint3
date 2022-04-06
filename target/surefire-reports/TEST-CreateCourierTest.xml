@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateOrderTest" time="0.001" tests="4" errors="4" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateCourierTest" time="16.039" tests="4" errors="3" skipped="0" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,8 +61,86 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="createOrderTest[0]" classname="CreateOrderTest" time="0">
-    <error message="wrong number of arguments" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: wrong number of arguments
+  <testcase name="CreateNewCourierTest" classname="CreateCourierTest" time="7.265">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "Doston77",
+    "password": "as34df546",
+    "firstName": "Достон Быстров"
+}
+{"ok":true}
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="createCourierWOPasswordTest" classname="CreateCourierTest" time="4.236">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "Doston4",
+    "firstName": "Достон БЫстров"
+}
+{"code":400,"message":"Недостаточно данных для создания учетной записи"}
+]]></system-out>
+  </testcase>
+  <testcase name="createSameCourier" classname="CreateCourierTest" time="4.453">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;409&gt; but was &lt;201&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <409> but was <201>.
+
+	at CreateCourierTest.createSameCourier(CreateCourierTest.java:27)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "Doston87",
+    "password": "as34df544",
+    "firstName": "Достон Супербыстров"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="createSameCourier" classname="CreateCourierTest" time="4.454">
+    <error message="Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
 </error>
   </testcase>
-  <testcase name="createOrderTest[1]" classname="CreateOrderTest" tim
+</testsuite>

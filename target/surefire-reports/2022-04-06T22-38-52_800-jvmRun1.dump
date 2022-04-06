@@ -1,0 +1,38 @@
+# Created at 2022-04-06T22:38:53.708
+java.lang.VerifyError: Expecting a stackmap frame at branch target 87
+Exception Details:
+  Location:
+    CreateCourierTest.CreateNewCourierTest()V @9: invokestatic
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0000000: b200 6d2a 2ab8 0073 4db8 0079 2cb6 007d
+    0000010: b800 024c 2bb9 0003 0100 c000 04b9 0005
+    0000020: 0100 c000 0411 00c9 b900 0602 00c0 0004
+    0000030: 1207 04b8 0008 b800 0903 bd00 0ab9 000b
+    0000040: 0400 57b2 000c 2bb9 000d 0100 b900 0e01
+    0000050: 00b6 000f a700 0d4e b800 792d b600 812d
+    0000060: bfb8 0079 b600 84b1                    
+  Exception Handler Table:
+    bci [9, 87] => handler: 87
+
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3307)
+	at java.base/java.lang.Class.getMethod0(Class.java:3293)
+	at java.base/java.lang.Class.getMethod(Class.java:2106)
+	at org.apache.maven.surefire.util.ReflectionUtils.tryGetMethod(ReflectionUtils.java:60)
+	at org.apache.maven.surefire.common.junit3.JUnit3TestChecker.isSuiteOnly(JUnit3TestChecker.java:66)
+	at org.apache.maven.surefire.common.junit3.JUnit3TestChecker.isValidJUnit3Test(JUnit3TestChecker.java:61)
+	at org.apache.maven.surefire.common.junit3.JUnit3TestChecker.accept(JUnit3TestChecker.java:56)
+	at org.apache.maven.surefire.common.junit4.JUnit4TestChecker.accept(JUnit4TestChecker.java:53)
+	at org.apache.maven.surefire.util.DefaultScanResult.applyFilter(DefaultScanResult.java:102)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.scanClassPath(JUnit4Provider.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.setTestsToRun(JUnit4Provider.java:189)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:132)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+

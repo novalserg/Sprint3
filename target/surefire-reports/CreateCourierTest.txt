@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: CreateCourierTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 16.039 s <<< FAILURE! - in CreateCourierTest
+CreateNewCourierTest(CreateCourierTest)  Time elapsed: 7.265 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
+
+createCourierWOPasswordTest(CreateCourierTest)  Time elapsed: 4.236 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
+
+createSameCourier(CreateCourierTest)  Time elapsed: 4.453 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <409> but was <201>.
+
+	at CreateCourierTest.createSameCourier(CreateCourierTest.java:27)
+
+createSameCourier(CreateCourierTest)  Time elapsed: 4.454 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at CreateCourierTest.deleteCourier(CreateCourierTest.java:43)
+
