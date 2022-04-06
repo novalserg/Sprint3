@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: LoginCourierTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in LoginCourierTest
+initializationError(LoginCourierTest)  Time elapsed: 0 s  <<< ERROR!
+org.junit.runners.model.InvalidTestClassError: 
+Invalid test class 'LoginCourierTest':
+  1. Method loginCourierPositiveTest() should not be static
+  2. Method loginCourierNotFullDataTest() should not be static
+  3. Method loginCourierNotExistingDataTest() should not be static
+

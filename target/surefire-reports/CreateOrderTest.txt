@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: CreateOrderTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in CreateOrderTest
+createOrderTest[0](CreateOrderTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: wrong number of arguments
+
+createOrderTest[1](CreateOrderTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: wrong number of arguments
+
+createOrderTest[2](CreateOrderTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: wrong number of arguments
+
+createOrderTest[3](CreateOrderTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: wrong number of arguments
+
